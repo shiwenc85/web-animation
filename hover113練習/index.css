@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(45, 45, 68);
+
+}
+
+.a {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+h1 {
+    width: 100px;
+    height: 35px;
+    color: #ffffff;
+    font-size: 30px;
+    position: relative;
+    text-align: center;
+}
+
+.b::before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .3s linear;
+}
+
+.b::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .3s linear;
+}
+
+.b:hover::before,
+.b:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.c::before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform .3s linear;
+}
+
+.c::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: scalex(0);
+    transition: transform .3s linear;
+}
+
+.c:hover::before,
+.c:hover::after {
+    transform: scalex(1);
+}
+
+.d::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scalex(0);
+    transform-origin: right;
+    transition: transform .3s linear;
+}
+
+.d:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.e::before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform .3s linear;
+}
+
+.e::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s linear;
+}
+
+.e:hover::before,
+.e:hover::after {
+    transform: scaleX(1);
+
+}
+
+.e:hover::before {
+    transform-origin: right;
+}
+
+.e:hover::after {
+    transform-origin: left;
+}
+
+.f::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #ff0000;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .3s linear
+}
+
+.f:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.g::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #22c9ea;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform .3s linear;
+}
+
+.g:hover::after {
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.h::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .3s linear;
+}
+
+.h:hover::after {
+    transform: scaleX(1);
+    transform-origin: center;
+}
+
+.i::before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .3s linear;
+}
+
+.i:hover::before {
+    transform: scaleX(1);
+    transform-origin: center;
+}
+
+.j::before,
+.j::after {
+    content: '';
+    width: 2px;
+    height: 100%;
+    background: aqua;
+    position: absolute;
+    top: 0;
+
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform .1s linear;
+}
+
+.j::before {
+    left: 0;
+}
+
+.j::after {
+    right: 0;
+}
+
+
+.j:hover::after,
+.j:hover::before {
+    transform: scaleY(1);
+    transform-origin: bottom;
+}
